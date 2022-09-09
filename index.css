@@ -3,3 +3,11 @@ body{
     font-size: 10px;
     font-family:'Courier New', Courier, monospace;
 }
+
+
+.logo {
+
+    max-width: 100%;
+    height: auto;
+  
+  }
