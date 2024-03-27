@@ -7,10 +7,45 @@
     <title>JURA SOMAGUI®</title>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="img/favicon.png">
+    
 </head>
+
 <body>
-    <div class="logo"><img src="img/JS-L01.png" alt=""></div>
+    <div class="logo"><img src="img/JS-L01.svg" alt=""></div>
     <h1 style="color:#F3EEE1" >Objetos de uso familiar para la vida cotidiana.</h1>
 </body>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  height="5rem"
+  viewBox="0 0 20 20"
+  style="position: fixed"
+>
+<circle
+r="10"
+cy="10"
+cx="10"
+id="dot"/>
+</svg>
+<script>
+  const dot = document.querySelector("svg")
+  const colors = ["#FEC73D", "#D44338",]
+
+  function loop() {
+    const hRange = window.innerWidth - dot.clientWidth
+    const vRange = window.innerHeight - dot.clientHeight
+    const time = performance.now() * 0.15
+
+    const x = Math.abs((time % (hRange * 2)) - hRange)
+    dot.style.left = `${x}px`
+    const y = Math.abs((time % (vRange * 2)) - vRange)
+    dot.style.top = `${y}px`
+
+    const bounces = Math.floor(time / hRange) + Math.floor(time / vRange)
+    dot.style.fill = colors[bounces % colors.length]
+
+    requestAnimationFrame(loop)
+  }
+  loop()
+</script>
 
 </html>
