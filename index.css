@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'URBreg';
+    font-weight: normal;
+    src: url(font/urb-reg.woff2) format('woff2');
+    src: url(font/urb-reg.woff) format('woff');
+}
 body{
     background-color: #BF9A7D;    
     font-size: 10px;
-    font-family:'Courier New', Courier, monospace;
-}
+    font-family:'URBreg';
+    font-weight: normal;
 
+}
 
 .logo {
 
