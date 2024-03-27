@@ -1,15 +1,31 @@
 @font-face {
-    font-family: 'URBreg';
+    font-family: 'urbregular';
+    src: url(/font/urb-regular.woff2) format(woff2);
+    src: url(/font/urb-regular.woff) format(woff);
     font-weight: normal;
-    src: url(font/urb-reg.woff2) format('woff2');
-    src: url(font/urb-reg.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'urblight';
+    src: url(/font/urb-light.woff2) format(woff2);
+    src: url(/font/urb-light.woff) format(woff);
+    font-weight: normal;
 }
 body{
-    background-color: #BF9A7D;    
-    font-size: 10px;
-    font-family:'URBreg';
-    font-weight: normal;
+    background-color: #BF9A7D;
 
+}
+
+h1{
+    font-size: 18px;
+    font-family:'urbregular';
+    font-weight: normal;
+}
+
+h2{
+    font-size: 18px;
+    font-family:'urblight';
+    font-weight: normal;
 }
 
 .logo {
